@@ -9,8 +9,8 @@ library(tidyverse)
 nat <- sdk_retrieve_data("NAHO2")
 
 
-nat %>% 
-  mutate(INDHOLD = str_replace(INDHOLD, "..", "NA"))
+# nat %>% 
+#   mutate(INDHOLD = str_replace(INDHOLD, "..", "NA"))
 nat$INDHOLD <- as.numeric(nat$INDHOLD)
 
 
@@ -32,7 +32,7 @@ ggplot(subset(vaekst,TRANSAKT == "B.1*g Gross domestic product" & PRISENHED == "
     , aes(x= as.integer(TID), y = pct_change)) + 
   geom_line()
 
-ggplot(subset(vaekst,TRANSAKT == "B.1*g Gross domestic product" & PRISENHED == "2010-prices, chained values")
+ggplot(subset(vaekst,TRANSAKT == "D.1 Compensation of employees" & PRISENHED == "Current prices")
        , aes(x= as.integer(TID), y = pct_change)) + 
   geom_line()
 
