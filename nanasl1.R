@@ -6,7 +6,11 @@ nanasl1 <- sdk_retrieve_data("NASL1")
 nanasl1 %>% 
   mutate(INDHOLD = str_replace(INDHOLD, ".", "NA"))
 nanasl1$INDHOLD <- as.numeric(nanasl1$INDHOLD)
+<<<<<<< HEAD
 # vv
+=======
+
+>>>>>>> 9f62c77b0a714376423e42bfecdeb993eeb12c55
 
 l1.vaekst <- nanasl1 %>%
   group_by(TRANSAKT, SEKTOR) %>% 
