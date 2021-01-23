@@ -35,7 +35,7 @@ ggplot(subset(vaekst,TRANSAKT == "B.1*g Gross domestic product" & PRISENHED == "
 ggplot(subset(vaekst,TRANSAKT == "D.1 Compensation of employees" & PRISENHED == "Current prices")
        , aes(x= as.integer(TID), y = pct_change)) + 
   geom_line()
-
+# cc
 
 pris112 <- sdk_retrieve_data("PRIS112")
 folk2 <- sdk_retrieve_data("FOLK2", Tid = "1980")
